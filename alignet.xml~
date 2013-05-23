@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="vmpayment" method="upgrade">
+    <name>Alignet</name>
+    <creationDate>Mayo 2013</creationDate>
+    <author>Dairon Medina Caro</author>
+    <authorUrl>http://codeadict.org</authorUrl>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>
+        Plugin para pagos con Alignet(www.alignet.com) en Ecuador para VirtueMart.
+    </description>
+    <files>
+        <filename plugin="alignet">alignet.php</filename>
+        <folder>imagenes</folder>
+    </files>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning" />
+        <param type="spacer" default="Parametros del VPOS" />	
+        <param name="codigo_adquiriente" type="text" size="4"  label="Codigo Adquiriente" description="Codigo del Adquiriente." />
+        <param name="codigo_comercio" type="text" size="5"  label="Codigo Comercio" description="Codigo del Comercio." />  
+        <param name="idioma_comercio" type="text" size="2" default="SP"  label="Idioma Comercio" description="Idioma del Comercio." />
+        
+        <param name="vi" type="text" size="16" default="000001D000000000"  label="Vector Inicializacion" description="Vector de Inicializacion de 16 caracteres alfanumericos." />        
+        
+        <param name="modo_alignet" type="list" default="0" label="Modo Alignet">
+            <option value="1">Produccion</option>
+            <option value="0">Pruebas</option>
+        </param>
+        
+        <param type="spacer" default="Extras" />	
+        <param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="Impuestos" description="Impuestos Aplicados" />
+        <param name="segundos_redirecionar" type="text"  label="Segundos para Redirecionar Automaticamente" description="Segundos para Redirecionar automaticamente al pago" size="2" default="5" />
+
+    </params>
+</install>
