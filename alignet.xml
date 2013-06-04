@@ -29,6 +29,9 @@
             <option value="0">Pruebas</option>
         </param>
         
+        <param type="spacer" default="Seguridad" />
+        <param name="llave_pub" type="text" label="Llave Pública" description="Llave publica para autenticarse con ALIGNET"/>
+        
         <param type="spacer" default="Extras" />	
         <param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="Impuestos" description="Impuestos Aplicados" />
         <param name="segundos_redirecionar" type="text"  label="Segundos para Redirecionar Automaticamente" description="Segundos para Redirecionar automaticamente al pago" size="2" default="5" />
